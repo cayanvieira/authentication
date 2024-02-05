@@ -1,0 +1,6 @@
+Mudar name e description no package.json
+Retirar docker-compose.yml do diretorio
+Adicionar .env no gitignore
+Alterar valores do .env
+Alterar nome dos containers no docker-compose.yml
+Altera nome do banco de dados no docker-compose.yml

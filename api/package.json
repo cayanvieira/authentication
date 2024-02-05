@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon serve.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "node -r dotenv/config  node_modules/knex/bin/cli.js --cwd src/database  --knexfile config.js"
+  },
+  "author": "Cayan Vieira",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "knex": "^2.4.2",
+    "nodemailer": "^6.9.8",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7",
+    "pg": "^8.10.0",
+    "redis": "^4.6.13"
+  }
+}
