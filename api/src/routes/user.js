@@ -1,8 +1,9 @@
 async function routes(fastify, options) {
 
     fastify.post('/signup', async (request) => {
-        const { params } = request.body
-        const user = await fastify.service.User.register(params)
+        console.log('asquasd')
+        const { email, name, password } = request.body
+        const user = await fastify.service.User.signup({ email, name, password })
 
         const code = await fastify.service.Auth.challenge(user.id)
 
@@ -24,9 +25,9 @@ async function routes(fastify, options) {
     })
 
     fastify.put('/verify', async (request) => {
-        const { userId, codeConfirm } = request.body
+        const { userEmail, codeConfirm } = request.body
 
-        return fastify.service.Auth.verifyAccount(userId, codeConfirm)
+        return fastify.service.Auth.verifyUser(userEmail, codeConfirm)
     })
 
 }

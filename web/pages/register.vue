@@ -1,5 +1,5 @@
 <template>
-  <v-layout ref="app" class="rounded rounded-md">
+  <v-layout ref="app" class="rounded rounded-md d-flex justify-center">
     <v-main
       class="d-flex align-top justify-center"
       style="height: 100vh; max-width: 1920px"

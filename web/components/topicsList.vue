@@ -7,9 +7,7 @@
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" :title="item.title"> </v-list-item>
         </template>
-        <v-card-text class="text-caption">
-          {{ item.text }}
-        </v-card-text>
+        <v-card-text class="text-caption"> {{ item.text }} </v-card-text>
       </v-list-group>
     </v-list>
   </v-card>

@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   modules: [
     '@invictus.codes/nuxt-vuetify',
+    '@pinia/nuxt'
   ],
   vuetify: {
     /* vuetify options */
@@ -10,14 +11,17 @@ export default defineNuxtConfig({
 
     moduleOptions: {
       /* nuxt-vuetify module options */
-      treeshaking:  false,
+      treeshaking: false,
       useIconCDN: false,
 
       /* vite-plugin-vuetify options */
       styles: true,
       autoImport: true,
-      useVuetifyLabs: false, 
-    }   
+      useVuetifyLabs: false,
+    }
   },
-  pages:true
+  pinia: {
+    storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
+  pages: true,
 })

@@ -28,7 +28,7 @@
   </v-layout>
 </template>
 
-<script>
+<script >
 import LoginCard from "../components/loginCard.vue";
 import Tools from "../components/tools.vue";
 import TopicsList from "../components/topicsList.vue";
@@ -40,7 +40,12 @@ export default {
     Tools,
   },
   data: () => {
-    return {};
+    return { result: {} };
+  },
+  methods: {
+    async privateURL() {
+      return this.$store.auth.private();
+    },
   },
 };
 </script>
